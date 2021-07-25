@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">tsvNeuensorgTicker</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_action_text_delete">einträge löschen</string>
+    <string name="pref_header_spielinfo">spielinfo</string>
+    <string name="pref_header_appsettings">appeinstellungen</string>
+    <string name="name_erste_mannschaft">tsv neuensorg</string>
+    <string name="name_zweite_mannschaft">tsv neuensorg II</string>
+    <string name="title_gesamtkader">gesamtkader</string>
+    <string name="key_gesamtkader">gesamtkader</string>
+    <string name="title_add_player_to_gesamtkader">spieler hinzufügen</string>
+    <string name="title_remove_player_from_gesamtkader">spieler entfernen</string>
+    <string name="title_show_notification">notification anzeigen</string>
+    <string name="key_team">key_team</string>
+    <string name="key_show_notification">key_show_notification</string>
+    <string name="notificationChannelName">tsv ticker notification channel</string>
+    <string name="notificationChannelDescription">der kanal der benachrichtigung der tsv ticker app - hier wird der spielstand und die zeit angezeigt</string>
+    <string name="key_auto_send_to_whatsapp">key_auto_send_to_whatsapp</string>
+    <string name="key_spieler_erste_mannschaft">key_spieler_erste_mannschaft</string>
+    <string name="key_spieler_zweite_mannschaft">key_spieler_zweite_mannschaft</string>
+    <string name="standard_imbut_description">standard image button description</string>
+    <string name="imbut_text_tor">tor</string>
+    <string name="imbut_text_eigentor">eigentor</string>
+    <string name="imbut_text_auswaechslung">wechsel</string>
+    <string name="imbut_text_karte">karte</string>
+    <string name="imbut_text_chance">chance</string>
+    <string name="imbut_text_foul">foul</string>
+    <string name="imbut_text_elfmeter">elfmeter</string>
+    <string name="imbut_text_sonstiges">sonstiges</string>
+    <string name="imbut_text_freistoss">freistoß</string>
+    <string name="imbut_text_konter">konter</string>
+    <string name="imbut_text_anabpfiff">an-/abpfiff</string>
+    <string name="imbut_text_abseits">abseits</string>
+    <string name="imbut_text_pretext">pretext</string>
+    <string name="imbut_text_posttext">posttext</string>
+    <string name="etext_std_hint">eingabe</string>
+    <string name="imbut_text_addTime">+zeit</string>
+    <string name="but_std_text_zeitanzeige">00:00</string>
+    <string name="but_std_text_toranzeige">0:0</string>
+    <string name="etext_time_akt_hint">zeit seit halbzeitbeginn (xx:xx oder xx)</string>
+    <string name="but_halbzeit_std_text">1. halbzeit</string>
+    <string name="radiobut_1_mannschaft_text">1. mannschaft</string>
+    <string name="radiobut_2_mannschaft_text">2. mannschaft</string>
+    <string name="radiobut_1_halbzeit_text">1. halbzeit</string>
+    <string name="radiobut_2_halbzeit_text">2. halbzeit</string>
+    <string name="anzeigetext_1_halbzeit">1. halbzeit</string>
+    <string name="anzeigetext_2_halbzeit">2. halbzeit</string>
+    <string name="anzeigetext_1_mannschaft">1. mannschaft</string>
+    <string name="anzeigetext_2_mannschaft">2. mannschaft</string>
+    <string name="but_halbzeit_startet_jetzt">halbzeit startet jetzt</string>
+    <string name="saveID_ms_halbzeit_gestartet">saveID_ms_halbzeit_gestartet</string>
+    <string name="saveID_halbzeit">saveID_halbzeit</string>
+    <string name="saveID_team">saveID_team</string>
+    <string name="anzeigetext_std_eingabe_zeit_implementieren">zeit einfügen</string>
+    <string name="key_string_array_list_to_parse_to_std_action_dialog">key_string_array_list_to_parse_to_std_action_dialog</string>
+    <string name="key_string__to_parse_to_std_action_dialog_anzeigezeit">key_string__to_parse_to_std_action_dialog_anzeigezeit</string>
+    <string name="key_string_array_list_to_parse_to_std_action_dialog_last_array_indicator">key_string_array_list_to_parse_to_std_action_dialog_last_array_indicator</string>
+    <string name="key_string_array_list_to_parse_to_radio_group_mit_header">key_string_array_list_to_parse_to_radio_group_mit_header</string>
+    <string name="displaytext_doch_nichts_auswaehlen">doch nichts auswählen</string>
+    <string name="hierKommtDieTextAnzeigeHin">hier kommt die textanzeige hin</string>
+    <string name="eintrage_savefile_name">eintrage_savefile_name</string>
+    <string name="eintrage_trenner">xyz_eintrage_trenner_xyz</string>
+    <string name="title_senden_key">go</string>
+    <string name="eintrag_text_key_in_bundle">eintrag_text_key_in_bundle</string>
+    <string name="eintrag_index_key_in_bundle">eintrag_index_key_in_bundle</string>
+
+
+    <string name="gesamtkader_savefile_name">gesamtkader_savefile_name</string>
+
+    <string name="preferenceCategory_title_erste_mannschaft">erste mannschaft</string>
+    <string name="title_spieler_erste_mannschaft">spieler</string>
+    <string name="pref_gegner_erste_mannschaft_hint">gegner der ersten mannschaft</string>
+    <string name="pref_gegner_erste_mannschaft_title">gegner</string>
+    <string name="pref_gegner_erste_mannschaft_key">pref_gegner_erste_mannschaft_key</string>
+    <string name="pref_heimspiel_erste_mannschaft_hint">heimspiel der ersten mannschaft</string>
+    <string name="pref_heimspiel_erste_mannschaft_title">heimspiel?</string>
+    <string name="pref_heimspiel_erste_mannschaft_key">pref_heimspiel_erste_mannschaft_key</string>
+
+    <string name="preferenceCategory_title_zweite_mannschaft">zweite mannschaft</string>
+    <string name="title_spieler_zweite_mannschaft">spieler</string>
+    <string name="pref_gegner_zweite_mannschaft_hint">gegner der zweiten mannschaft</string>
+    <string name="pref_gegner_zweite_mannschaft_title">gegner</string>
+    <string name="pref_gegner_zweite_mannschaft_key">pref_gegner_zweite_mannschaft_key</string>
+    <string name="pref_heimspiel_zweite_mannschaft_hint">heimspiel der zweiten mannschaft</string>
+    <string name="pref_heimspiel_zweite_mannschaft_title">heimspiel?</string>
+    <string name="pref_heimspiel_zweite_mannschaft_key">pref_heimspiel_zweite_mannschaft_key</string>
+
+    <string name="heim_team_tore_key">heimteamtore</string>
+    <string name="auswarts_team_tore_key">auswartsteamtore</string>
+
+    <string name="tsv1_tore_speicher_key">tsv1_tore_speicher_key</string>
+    <string name="tsv2_tore_speicher_key">tsv2_tore_speicher_key</string>
+    <string name="gegner1_tore_speicher_key">gegner1_tore_speicher_key</string>
+    <string name="gegner2_tore_speicher_key">gegner2_tore_speicher_key</string>
+
+    <string name="etext_tore_heim_akt_hint">heim tore</string>
+    <string name="textview_tore_akt_doppelpunkt">:</string>
+    <string name="etext_tore_auswarts_akt_hint">auswarts tore</string>
+
+</resources>

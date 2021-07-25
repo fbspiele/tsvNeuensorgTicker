@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupHalbzeitWechseln"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioButton
+            android:id="@+id/radioButton1Halbzeit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/radiobut_1_halbzeit_text"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioButton2Halbzeit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/radiobut_2_halbzeit_text" />
+    </RadioGroup>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:digits="0123456789:"
+        android:id="@+id/eingabeTextFeldTimeAktualisieren"
+        android:hint="@string/etext_time_akt_hint"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:textAllCaps="false"
+        android:text="@string/but_halbzeit_startet_jetzt"
+        android:id="@+id/buttonHalbzeitbeginnJetzt"/>
+
+</LinearLayout>

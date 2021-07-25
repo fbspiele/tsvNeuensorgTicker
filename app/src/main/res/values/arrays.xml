@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="key_string_array_list_to_parse_to_std_action_dialog_last_index_indicator">
+        <item>key_string_array_list_to_parse_to_std_action_dialog_last_index_indicator</item>
+    </string-array>
+
+
+    <string-array name="chance_adjektive">
+        <item>glückliche</item>
+        <item>gute</item>
+        <item>schöne</item>
+        <item>schlechte</item>
+        <item>miserable</item>
+        <item>unberechtigte</item>
+    </string-array>
+
+
+    <string-array name="chance_ergebnis_moglichkeiten">
+        <item>doch der ball wurde vom torwart gehalten</item>
+        <item>doch der ball wurde vom torwart abgewehrt</item>
+        <item>doch der ball wurde geblockt</item>
+        <item>doch der ball geht daneben</item>
+        <item>doch der ball geht richtung eckfahne</item>
+        <item>doch der ball geht meilenweit drüber</item>
+        <item>doch der ball geht in die wolken</item>
+        <item>doch der ball geht in die mauer</item>
+        <item>doch der ball geht drüber</item>
+        <item>doch der ball geht an die latte</item>
+        <item>doch der ball geht an den pfosten</item>
+        <item>doch der ball geht ans aluminium</item>
+        <item>doch der ball geht ins aus</item>
+        <item>doch der ball kommt nicht bis zum tor</item>
+        <item>doch der schiedsrichter pfeift die aktion ab</item>
+        <item>doch der schiedsrichter pfeift abseits</item>
+        <item>doch der schiedsrichter pfeift foul</item>
+        <item>doch der schiedsrichter pfeift stürmerfoul</item>
+    </string-array>
+
+
+    <string-array name="gesamtkader">
+        <item>robin engel</item>
+        <item>uwe janusch</item>
+        <item>patrick marr</item>
+
+
+        <item>mateusz adamczyk</item>
+        <item>lukas amman</item>
+        <item>andreas asselborn</item>
+        <item>vahit atessacan</item>
+        <item>stephen bauersachs</item>
+        <item>marco bornitzky</item>
+        <item>mariusz borowiak</item>
+        <item>steffen braunreuther</item>
+        <item>robin bullmann</item>
+        <item>christian danzer</item>
+        <item>tobias dehler</item>
+        <item>florian diezmann</item>
+        <item>christian engel</item>
+        <item>sebastian engel</item>
+        <item>florian ensberger</item>
+        <item>patrick fischer</item>
+        <item>sebastian fischer</item>
+        <item>tim fischer</item>
+        <item>daniel friedrich</item>
+        <item>erik gehrer</item>
+        <item>leon güntner</item>
+        <item>tim guthseel</item>
+        <item>mike hanke</item>
+        <item>florian hauck</item>
+        <item>sascha hauk</item>
+        <item>tammo kemnitzer</item>
+        <item>adrian leistner</item>
+        <item>paul lischka</item>
+        <item>michael lösch</item>
+        <item>julian ludwig</item>
+        <item>christian melzer</item>
+        <item>steve mertinatsch</item>
+        <item>benjamin meyer</item>
+        <item>julian müller</item>
+        <item>peter niedermeyer</item>
+        <item>steffen otto</item>
+        <item>christian pompe</item>
+        <item>markus popp</item>
+        <item>darian pratsch</item>
+        <item>torsten räther</item>
+        <item>albert reichert</item>
+        <item>lars reinhardt</item>
+        <item>markus rinke</item>
+        <item>nils röbel</item>
+        <item>sven scheuschner</item>
+        <item>benedikt schmidt</item>
+        <item>jan schultheiß</item>
+        <item>bernd slotosch</item>
+        <item>markus thumerer</item>
+        <item>dimitri wagner</item>
+        <item>luis werner</item>Witteck
+        <item>jan witteck</item>
+        <item>tizian wittmann</item>Wohlleben
+        <item>kevin wohlleben</item>
+        <item>philipp zapf</item>
+    </string-array>
+
+    <string-array name="erstemannschaft">
+        <item>erstemannschaft spieler 1</item>
+        <item>erstemannschaft spieler 2</item>
+        <item>erstemannschaft spieler 3</item>
+        <item>erstemannschaft spieler 4</item>
+        <item>erstemannschaft spieler 5</item>
+        <item>erstemannschaft spieler 6</item>
+    </string-array>
+
+    <string-array name="zweitemannschaft">
+        <item>zweitemannschaft spieler 1</item>
+        <item>zweitemannschaft spieler 2</item>
+        <item>zweitemannschaft spieler 3</item>
+        <item>zweitemannschaft spieler 4</item>
+        <item>zweitemannschaft spieler 5</item>
+        <item>zweitemannschaft spieler 6</item>
+    </string-array>
+
+    <string-array name="positionen">
+        <item>einer linksausßenposition</item>
+        <item>linker position</item>
+        <item>halblinker position</item>
+        <item>mittlerer position</item>
+        <item>halbrechter position</item>
+        <item>rechter position</item>
+        <item>einer rechtsausßenposition</item>
+    </string-array>
+
+
+    <string-array name="wetter">
+        <item>sonnenschein</item>
+        <item>heiterem wetter</item>
+        <item>bedecktem himmel</item>
+        <item>nieselregen</item>
+        <item>regen</item>
+        <item>schneeregen</item>
+        <item>leichtem schneefall</item>
+        <item>schneefall</item>
+        <item>starkem schneefall</item>
+    </string-array>
+
+    <string-array name="platzverhaltnisse">
+        <item>perfekten</item>
+        <item>guten</item>
+        <item>mittelmäßigen</item>
+        <item>ungemütlichen</item>
+        <item>schlechten</item>
+        <item>misserablen</item>
+    </string-array>
+
+
+    <string-array name="tor_adjektive">
+        <item>gutes</item>
+        <item>schönes</item>
+        <item>unberechtigtes</item>
+        <item>glückliches</item>
+        <item>unglückliches</item>
+        <item>abseitswürdiges</item>
+    </string-array>
+
+    <string-array name="chance_aktionen">
+        <item>schießt</item>
+        <item>flankt</item>
+        <item>passt</item>
+        <item>tritt die ecke</item>
+        <item>schießt den freistoß</item>
+        <item>schießt den elfmeter</item>
+        <item>köpft</item>
+        <item>mit dem fallrückzieher</item>
+        <item>passt zurück</item>
+        <item>verlängert den ball</item>
+        <item>legt den ball zurück</item>
+        <item>mit einer undefinierbaren aktion</item>
+    </string-array>
+
+    <string-array name="tor_nach">
+        <item>einem schuss</item>
+        <item>einer flanke</item>
+        <item>einem eckball</item>
+        <item>einem freistoß</item>
+        <item>einem kopfball</item>
+        <item>einem fallrückzieher</item>
+        <item>dem eben angesprochen elfmeter</item>
+        <item>einem elfmeter</item>
+        <item>einem pass</item>
+        <item>einem rückpass</item>
+        <item>einer ballverlängerung</item>
+        <item>einem zurücklegen</item>
+    </string-array>
+
+
+    <string-array name="zweite_tor_aktion">
+        <item>köpft</item>
+        <item>lenkt</item>
+        <item>manövriert</item>
+        <item>schiebt</item>
+        <item>schießt</item>
+    </string-array>
+
+
+    <string-array name="tor_bereich">
+        <item>flach links aufs tor</item>
+        <item>links halbhoch aufs tor</item>
+        <item>links knapp unter die latte</item>
+        <item>in den linken winkel</item>
+        <item>flach mittig aufs tor</item>
+        <item>mittig halbhoch aufs tor</item>
+        <item>mittig knapp unter die latte</item>
+        <item>flach rechts aufs tor</item>
+        <item>rechts halbhoch aufs tor</item>
+        <item>rechts knapp unter die latte</item>
+        <item>in den rechten winkel</item>
+    </string-array>
+
+    <string-array name="foul_adjektive">
+        <item>böses</item>
+        <item>gelbwürdiges</item>
+        <item>leichtsinniges</item>
+        <item>rotwürdiges</item>
+        <item>schlimmes</item>
+        <item>taktisches</item>
+        <item>unschönes</item>
+    </string-array>
+
+    <string-array name="foul_ergebnis">
+        <item>bleibt ohne konsequenzen</item>
+        <item>wird mit einer gelben karte bestraft</item>
+        <item>wird mit einer roten karte bestraft</item>
+        <item>wird vom schiedsrichter übersehen</item>
+        <item>führt zu einem freistoß</item>
+        <item>wird mit einem elfmeter bestraft</item>
+    </string-array>
+
+    <string-array name="auswechslungsgrunde">
+        <item>uns unbekannter gründe</item>
+        <item>von arschproblemen</item>
+        <item>von bänderproblemen</item>
+        <item>von fußproblemen</item>
+        <item>von hodenproblemen</item>
+        <item>von knieproblemen</item>
+        <item>von knöchelproblemen</item>
+        <item>von knieproblemen</item>
+        <item>von leistenproblemen</item>
+        <item>von oberschenkelproblemen</item>
+        <item>von penisproblemen</item>
+        <item>von schienbeinproblemen</item>
+        <item>von wadenproblemen</item>
+        <item>von gelbgefahr</item>
+        <item>von gelbrotgefahr</item>
+        <item>von rotgefahr</item>
+        <item>konditioneller schwierigkeiten</item>
+        <item>muskulärer probleme</item>
+        <item>taktischer überlegungen</item>
+    </string-array>
+
+    <string-array name="kartenadjektiv">
+        <item>berechtigte</item>
+        <item>grenzwertige</item>
+        <item>überzogene</item>
+        <item>unberechtigte</item>
+        <item>zweifelhafte</item>
+    </string-array>
+
+    <string-array name="freistosadjektiv">
+        <item>berechtigter</item>
+        <item>grenzwertiger</item>
+        <item>überzogener</item>
+        <item>unberechtigter</item>
+        <item>zweifelhafter</item>
+    </string-array>
+
+
+    <string-array name="kartenmoglichkeiten">
+        <item>gelbe karte</item>
+        <item>gelb-rote karte</item>
+        <item>rote karte</item>
+    </string-array>
+
+    <string-array name="kartengrund">
+        <item>meckern</item>
+        <item>einem foul</item>
+        <item>einem hartem foul</item>
+        <item>einem angeblichen foul</item>
+        <item>einem taktischen foul</item>
+        <item>einer unsportlichkeit</item>
+        <item>einer angeblichen unsportlichkeit</item>
+        <item>einem handspiel</item>
+    </string-array>
+
+
+
+</resources>

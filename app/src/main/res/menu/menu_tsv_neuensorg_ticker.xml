@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="fbspiele.tsvneuensorgticker.tsvNeuensorgTicker">
+
+    <item
+        android:id="@+id/menu_action_text_delete"
+        android:orderInCategory="100"
+        android:title="@string/menu_action_text_delete"
+        android:icon="@drawable/ic_baseline_delete_sweep_24px"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="279"
+        android:title="@string/action_settings"
+        android:icon="@drawable/ic_baseline_settings_20px"
+        app:showAsAction="ifRoom" />
+
+</menu>

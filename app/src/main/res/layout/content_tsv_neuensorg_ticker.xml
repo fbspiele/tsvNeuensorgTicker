@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".tsvNeuensorgTicker"
+    tools:showIn="@layout/activity_tsv_neuensorg_ticker">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayoutHalbzeitUndMinuten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/minutenanzeige"
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/but_std_text_zeitanzeige"
+                android:textSize="30sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/heimteamanzeige"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/toranzeige"
+                    android:layout_toStartOf="@id/toranzeige"
+                    android:background="@color/transparent"
+                    android:gravity="right|center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/name_erste_mannschaft"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/toranzeige"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent"
+                    android:padding="5dp"
+                    android:text="@string/but_std_text_toranzeige"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/auswartsteamanzeige"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/toranzeige"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@id/toranzeige"
+                    android:background="@color/transparent"
+                    android:gravity="left|center_vertical"
+                    android:padding="5dp"
+                    android:text="@string/pref_gegner_erste_mannschaft_title"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/scrollViewAktionenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="false"
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="false"
+        app:layout_constraintTop_toBottomOf="@+id/scrollViewEintragAnzeige">
+
+
+        <TableLayout
+            android:id="@+id/aktionenLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TableRow android:paddingTop="20dp">
+
+                <Button
+                    android:id="@+id/imButAnAbPfiff"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/standard_imbut_description"
+                    android:drawableTop="@drawable/test"
+                    android:text="@string/imbut_text_anabpfiff"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/imButChance"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/standard_imbut_description"
+                    android:drawableTop="@drawable/chance"
+                    android:text="@string/imbut_text_chance"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/imButTor"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/standard_imbut_description"
+                    android:drawableTop="@drawable/tor"
+                    android:text="@string/imbut_text_tor"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/imButEigentor"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/standard_imbut_description"
+                    android:drawableTop="@drawable/test"
+                    android:text="@string/imbut_text_eigentor"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" />
+
+            </TableRow>
+
+
+            <TableRow android:paddingTop="20dp">
+
+                <Button
+                    android:id="@+id/imButFoul"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/standard_imbut_description"
+                    android:drawableTop="@drawable/foul"
+                    android:text="@string/imbut_text_foul"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/imButKarte"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/standard_imbut_description"
+                    android:drawableTop="@drawable/karte"
+                    android:text="@string/imbut_text_karte"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/imButFreistos"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/standard_imbut_description"
+                    android:drawableTop="@drawable/freistoss"
+                    android:text="@string/imbut_text_freistoss"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/imButElfmeter"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/standard_imbut_description"
+                    android:drawableTop="@drawable/elfmeter"
+                    android:text="@string/imbut_text_elfmeter"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" />
+
+            </TableRow>
+
+            <TableRow android:paddingTop="20dp">
+
+                <Button
+                    android:id="@+id/imButPretext"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/standard_imbut_description"
+                    android:drawableTop="@drawable/pretext"
+                    android:text="@string/imbut_text_pretext"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:id="@+id/imButPosttext"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/standard_imbut_description"
+                    android:drawableTop="@drawable/test"
+                    android:text="@string/imbut_text_posttext"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/imButAuswechslung"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/standard_imbut_description"
+                    android:drawableTop="@drawable/wechsel"
+                    android:text="@string/imbut_text_auswaechslung"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/imButSonstiges"
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/standard_imbut_description"
+                    android:drawableTop="@drawable/sonstiges"
+                    android:text="@string/imbut_text_sonstiges"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" />
+
+            </TableRow>
+        </TableLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollViewEintragAnzeige"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_above="@id/scrollViewAktionenLayout"
+        android:layout_below="@+id/linearLayoutHalbzeitUndMinuten">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutEintragAnzeige"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.0729"
+        android:contentDescription="@string/standard_imbut_description"
+        app:srcCompat="@drawable/tsvneuensorglogo" />
+
+
+</android.widget.RelativeLayout>
+
+<!--
+    <ScrollView
+        android:id="@+id/scrollViewSpieler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eingabeTextFeld">
+
+        <LinearLayout
+            android:id="@+id/spielerLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollViewAktionen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/scrollViewSpieler"
+        app:layout_constraintTop_toBottomOf="@+id/eingabeTextFeld">
+
+        <LinearLayout
+            android:id="@+id/aktionenLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>-->
+
+
+
+<!--
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eingabeTextFeld">
+
+        <ScrollView
+            android:id="@+id/scrollViewSpieler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/scrollViewAktionen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eingabeTextFeld">
+
+            <LinearLayout
+                android:id="@+id/spielerLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/scrollViewAktionen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eingabeTextFeld">
+
+            <LinearLayout
+                android:id="@+id/aktionenLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+-->
