@@ -66,6 +66,15 @@
 
 
     <string name="gesamtkader_savefile_name">gesamtkader_savefile_name</string>
+    <string name="preferenceCategory_title_gesamtkader">gesamter Kader</string>
+
+    <string name="pref_spieler_hinzufugen_title">neuer spieler</string>
+    <string name="pref_key_myGesamtKaderListSaveKey">pref_key_myGesamtKaderListSaveKey</string>
+
+    <string name="preferenceCategory_title_activeSpieler">heute im kader</string>
+    <string name="preferenceCategory_title_inactiveSpieler">heute nicht im kader</string>
+    <string name="preferenceCategory_title_neverActiveSpieler">noch nie im kader</string>
+
 
     <string name="preferenceCategory_title_erste_mannschaft">erste mannschaft</string>
     <string name="title_spieler_erste_mannschaft">spieler</string>

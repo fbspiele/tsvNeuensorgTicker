@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <MultiSelectListPreference
+    <Preference
         android:key="@string/key_gesamtkader"
-        android:title="@string/title_gesamtkader"
-        android:entries="@array/gesamtkader"
-        android:entryValues="@array/gesamtkader"/>
+        android:title="@string/title_gesamtkader"/>
 
     <PreferenceCategory
         android:title="@string/preferenceCategory_title_erste_mannschaft"
@@ -14,11 +13,9 @@
 
 
 
-    <MultiSelectListPreference
+    <Preference
         android:key="@string/key_spieler_erste_mannschaft"
-        android:title="@string/title_spieler_erste_mannschaft"
-        android:entries="@array/gesamtkader"
-        android:entryValues="@array/gesamtkader"/>
+        android:title="@string/title_spieler_erste_mannschaft"/>
 
     <EditTextPreference
         android:hint="@string/pref_gegner_erste_mannschaft_hint"
@@ -40,11 +37,9 @@
 
 
 
-    <MultiSelectListPreference
+    <Preference
         android:key="@string/key_spieler_zweite_mannschaft"
-        android:title="@string/title_spieler_zweite_mannschaft"
-        android:entries="@array/gesamtkader"
-        android:entryValues="@array/gesamtkader"/>
+        android:title="@string/title_spieler_zweite_mannschaft"/>
 
     <EditTextPreference
         android:hint="@string/pref_gegner_zweite_mannschaft_hint"

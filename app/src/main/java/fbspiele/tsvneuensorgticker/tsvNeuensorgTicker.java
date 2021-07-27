@@ -39,6 +39,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -48,6 +50,7 @@ import java.io.FileReader;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.Timer;
@@ -68,6 +71,7 @@ public class tsvNeuensorgTicker extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         loadSettings();
+        loadMyGesamtKaderList(getApplicationContext());
 
         setOnClickListeners();
 
@@ -128,6 +132,56 @@ public class tsvNeuensorgTicker extends AppCompatActivity {
 
         editor.apply();
     }
+
+    public static List<Spieler> myGesamtKaderList;
+
+    public static void saveMyGesamtKaderList(Context context, List<Spieler> neueGesamtKaderListe){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(neueGesamtKaderListe);
+        editor.putString(context.getString(R.string.pref_key_myGesamtKaderListSaveKey),json);
+        editor.apply();
+    }
+
+    static List<Spieler> loadMyGesamtKaderList(Context context){
+        boolean spielerListeResetten = false;
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        Gson gson = new Gson();
+        String json = sharedPreferences.getString(context.getString(R.string.pref_key_myGesamtKaderListSaveKey),"");
+        List<Spieler> spielerList = gson.fromJson(json, new TypeToken<List<Spieler>>(){}.getType());
+        if(spielerList==null){
+            spielerListeResetten = true;
+            Toast.makeText(context, "keiner Spieler in der Gesamtkaderliste, deswegen wird die Standardliste geladen",Toast.LENGTH_LONG).show();
+            String[] defaultSpielerArray = context.getResources().getStringArray(R.array.default_gesamtkader);
+            Arrays.sort(defaultSpielerArray);
+
+            spielerList = new ArrayList<>();
+            for(String spielerName:defaultSpielerArray){
+                Spieler spieler = new Spieler();
+                spieler.name = spielerName;
+                spielerList.add(spieler);
+            }
+        }
+
+        spielerList.sort(new Comparator<Spieler>() {
+            public int compare(Spieler s1, Spieler s2) {
+                return s1.name.compareTo(s2.name);
+            }
+        });
+
+        //log spieler list
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0;i < spielerList.size(); i++){
+            sb.append("\n").append(spielerList.get(i).name);
+        }
+        Log.v("MainAcitivity","loaded spielerList "+sb.toString());
+        if(spielerListeResetten){
+            saveMyGesamtKaderList(context, spielerList);
+        }
+        return spielerList;
+    }
+
     void anzeigeAktualisieren(){
         halbzeitAktualisieren(halbZeit);
         mannschaftAktualisieren(team);
@@ -186,7 +240,7 @@ public class tsvNeuensorgTicker extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(getApplicationContext(),"in dev",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"noch ned programmiert",Toast.LENGTH_LONG).show();
                     }
                 });
             }
@@ -277,7 +331,7 @@ public class tsvNeuensorgTicker extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(getApplicationContext(),"in dev",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"noch ned programmiert",Toast.LENGTH_LONG).show();
                     }
                 });
             }
@@ -506,7 +560,7 @@ public class tsvNeuensorgTicker extends AppCompatActivity {
                     @Override
                     public void run() {
                         getMannschaftsSpielerStringMitKommasUndUnd();
-                        Toast.makeText(getApplicationContext(),"in dev",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"noch ned programmiert",Toast.LENGTH_LONG).show();
                     }
                 });
             }
@@ -550,21 +604,30 @@ public class tsvNeuensorgTicker extends AppCompatActivity {
         return stringBuilder.toString();
     }
     String[] getMannschaftsSpieler(){
-        String[] erstemannschaft = getResources().getStringArray(R.array.erstemannschaft);
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        Set<String> stringSet;
+        List<String> mannschaftsSpielerStringList = new ArrayList<>();
         if(team == 1){
-            stringSet = sharedPreferences.getStringSet(getString(R.string.key_spieler_erste_mannschaft), null);
+            for (Spieler spieler:loadMyGesamtKaderList(getApplicationContext())){
+                if(spieler.letztesMalInErsterMannschaft!=null){
+                    if(spieler.letztesMalInErsterMannschaft<=0){
+                        mannschaftsSpielerStringList.add(spieler.name);
+                    }
+                }
+            }
         }
         else {
-            stringSet = sharedPreferences.getStringSet(getString(R.string.key_spieler_zweite_mannschaft), null);
+            for (Spieler spieler:loadMyGesamtKaderList(getApplicationContext())){
+                if(spieler.letztesMalInZweiterMannschaft!=null){
+                    if(spieler.letztesMalInZweiterMannschaft<=0){
+                        mannschaftsSpielerStringList.add(spieler.name);
+                    }
+                }
+            }
         }
-        if(stringSet==null){
+        if(mannschaftsSpielerStringList.size()==0){
             return getEmptyStringArray();
         }
-        String[] mannschaftsSpieler = stringSet.toArray(new String[stringSet.size()]);
-        Arrays.sort(mannschaftsSpieler);
-        return mannschaftsSpieler;
+        return mannschaftsSpielerStringList.toArray(new String[0]);
     }
 
     int team = 1;

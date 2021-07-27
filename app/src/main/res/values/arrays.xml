@@ -38,7 +38,7 @@
     </string-array>
 
 
-    <string-array name="gesamtkader">
+    <string-array name="default_gesamtkader">
         <item>robin engel</item>
         <item>uwe janusch</item>
         <item>patrick marr</item>
@@ -282,7 +282,7 @@
     <string-array name="kartengrund">
         <item>meckern</item>
         <item>einem foul</item>
-        <item>einem hartem foul</item>
+        <item>einem harten foul</item>
         <item>einem angeblichen foul</item>
         <item>einem taktischen foul</item>
         <item>einer unsportlichkeit</item>
