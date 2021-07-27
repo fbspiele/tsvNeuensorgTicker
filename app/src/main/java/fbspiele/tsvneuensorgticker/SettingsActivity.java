@@ -252,8 +252,40 @@ public class SettingsActivity extends PreferenceActivity {
                 return;
             }
 
-
             gesamtKaderList = tsvNeuensorgTicker.loadMyGesamtKaderList(context);
+
+            Preference alleZuruckAufNochNieImKader = new Preference(context);
+            alleZuruckAufNochNieImKader.setTitle("alle auf noch nie im kader");
+            alleZuruckAufNochNieImKader.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                @Override
+                public boolean onPreferenceClick(Preference preference) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                    builder.setTitle("alle auf noch nie im kader?");
+                    builder.setMessage("willst du alle Spieler zurück auf noch nie im Kader setzten?");
+                    builder.setPositiveButton("jo", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            if(mannschaft==1){
+                                for(Spieler spieler:gesamtKaderList){
+                                    spieler.letztesMalInErsterMannschaft = null;
+                                }
+                            }
+                            else if(mannschaft==2){
+                                for(Spieler spieler:gesamtKaderList){
+                                    spieler.letztesMalInZweiterMannschaft = null;
+                                }
+                            }
+                            tsvNeuensorgTicker.saveMyGesamtKaderList(context,gesamtKaderList);
+                            onResume();
+                        }
+                    });
+                    builder.setNeutralButton("doch ned",null);
+                    builder.show();
+                    return true;
+                }
+            });
+            preferenceScreen.addPreference(alleZuruckAufNochNieImKader);
+
             List<Spieler> aktiveSpielerList = new ArrayList<>();
             List<Spieler> inaktiveSpielerList = new ArrayList<>();
             List<Spieler> nieAktiveSpielerList = new ArrayList<>();
